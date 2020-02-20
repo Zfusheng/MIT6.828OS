@@ -21,5 +21,6 @@ myapi.key
 xv6.out*
 settings.json
 *.pyc
+.DS_Store
 .vagrant/
 submissions/
