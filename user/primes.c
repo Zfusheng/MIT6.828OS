@@ -33,7 +33,7 @@ sieve()
       }
     }
     close(1);
-    wait();
+    wait(0);
   } else {
     redirect(0, pd);
     sieve();
@@ -57,11 +57,11 @@ main(int argc, char *argv[])
     // wait for child proces to finish
     // if not, parent may finish before child
     // thus mess shell's '$' prompt
-    wait();
+    wait(0);
   } else {
     redirect(0, pd);
     sieve();
   }
 
-  exit();
+  exit(0);
 }

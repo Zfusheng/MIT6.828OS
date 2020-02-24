@@ -17,7 +17,7 @@ main(int argc, char *argv[])
     read(parent_fd[0], buffer, sizeof buffer);
     printf("%d: received %s\n", getpid(), buffer);
     write(child_fd[1], "pong", strlen("pong"));
-    exit();
+    exit(0);
   }
 
   // parent process
@@ -25,5 +25,5 @@ main(int argc, char *argv[])
   read(child_fd[0], buffer, sizeof buffer);
   printf("%d: received %s\n", getpid(), buffer);
 
-  exit();
+  exit(0);
 }

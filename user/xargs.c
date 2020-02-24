@@ -45,7 +45,7 @@ main(int argc, char *argv[])
     pass[pos] = 0;
 
     if(fork()){
-      wait();
+      wait(0);
     } else {
       exec(pass[0], pass);
     }
@@ -53,7 +53,8 @@ main(int argc, char *argv[])
 
   if(n < 0){
     printf("xargs: read error\n");
+    exit(1);
   }
 
-  exit();
+  exit(0);
 }

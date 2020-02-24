@@ -78,11 +78,11 @@ main(int argc, char *argv[])
 {
   if(argc < 3){
     fprintf(2, "usage: find root_path pattern\n");
-    exit();
+    exit(1);
   }
 
   find(argv[1], argv[2]);
-  exit();
+  exit(0);
 }
 
 int matchstar(int, char*, char*);
